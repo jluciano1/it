@@ -63,8 +63,8 @@ public class PessoaBusiness {
    * 
    * @generated
    */
-  public void delete(java.lang.Integer chaveCliente) throws Exception {
-    Pessoa entity = this.get(chaveCliente);
+  public void delete(java.lang.Integer id) throws Exception {
+    Pessoa entity = this.get(id);
     // begin-user-code  
     // end-user-code
     this.repository.delete(entity);
@@ -77,10 +77,10 @@ public class PessoaBusiness {
    * 
    * @generated
    */
-  public Pessoa get(java.lang.Integer chaveCliente) throws Exception {
+  public Pessoa get(java.lang.Integer id) throws Exception {
     // begin-user-code  
     // end-user-code
-    Pessoa result = repository.findOne(chaveCliente);
+    Pessoa result = repository.findOne(id);
     // begin-user-code
     // end-user-code
     return result;
@@ -119,10 +119,10 @@ public class PessoaBusiness {
    * @generated modifiable
    * OneToMany Relation
    */  
-  public Page<Endereco> findEndereco(java.lang.Integer chaveCliente, Pageable pageable) {
+  public Page<Endereco> findEndereco(java.lang.Integer id, Pageable pageable) {
     // begin-user-code
     // end-user-code  
-    Page<Endereco> result = repository.findEndereco(chaveCliente, pageable);
+    Page<Endereco> result = repository.findEndereco(id, pageable);
     // begin-user-code  
     // end-user-code        
     return result;    

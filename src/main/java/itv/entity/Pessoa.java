@@ -26,7 +26,7 @@ public class Pessoa implements Serializable {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "id", nullable = false, insertable=true, updatable=true)
-  private java.lang.Integer chaveCliente;
+  private java.lang.Integer id;
   
   /**
   * @generated
@@ -165,6 +165,12 @@ public class Pessoa implements Serializable {
   private java.lang.String emailPes;
   
   /**
+  * @generated
+  */
+  @Column(name = "chaveCliente", nullable = true, unique = false, insertable=true, updatable=true)
+  private java.lang.String chaveCliente;
+  
+  /**
    * Construtor
    * @generated
    */
@@ -173,21 +179,21 @@ public class Pessoa implements Serializable {
 
   
   /**
-   * Obtém chaveCliente
-   * return chaveCliente
+   * Obtém id
+   * return id
    * @generated
    */
-  public java.lang.Integer getChaveCliente(){
-    return this.chaveCliente;
+  public java.lang.Integer getId(){
+    return this.id;
   }
   
   /**
-   * Define chaveCliente
-   * @param chaveCliente chaveCliente
+   * Define id
+   * @param id id
    * @generated
    */
-  public Pessoa setChaveCliente(java.lang.Integer chaveCliente){
-    this.chaveCliente = chaveCliente;
+  public Pessoa setId(java.lang.Integer id){
+    this.id = id;
     return this;
   }
   
@@ -610,6 +616,25 @@ public class Pessoa implements Serializable {
   }
   
   /**
+   * Obtém chaveCliente
+   * return chaveCliente
+   * @generated
+   */
+  public java.lang.String getChaveCliente(){
+    return this.chaveCliente;
+  }
+  
+  /**
+   * Define chaveCliente
+   * @param chaveCliente chaveCliente
+   * @generated
+   */
+  public Pessoa setChaveCliente(java.lang.String chaveCliente){
+    this.chaveCliente = chaveCliente;
+    return this;
+  }
+  
+  /**
    * @generated
    */ 
   @Override
@@ -617,7 +642,7 @@ public class Pessoa implements Serializable {
     if (this == obj) return true;
     if (obj == null || getClass() != obj.getClass()) return false;
     Pessoa object = (Pessoa)obj;
-    if (chaveCliente != null ? !chaveCliente.equals(object.chaveCliente) : object.chaveCliente != null) return false;
+    if (id != null ? !id.equals(object.id) : object.id != null) return false;
     return true;
   }
   
@@ -627,7 +652,7 @@ public class Pessoa implements Serializable {
   @Override
   public int hashCode() {
     int result = 1;
-    result = 31 * result + ((chaveCliente == null) ? 0 : chaveCliente.hashCode());
+    result = 31 * result + ((id == null) ? 0 : id.hashCode());
     return result;
   }
   

@@ -92,8 +92,8 @@ public class EnderecoREST {
    * Foreign Key pessoa
    * @generated
    */
-  @RequestMapping(method = RequestMethod.GET, value="/Pessoa/{pessoaChaveCliente}")    
-  public HttpEntity<PagedResources<Endereco>> findEnderecosByPessoa(@PathVariable("pessoaChaveCliente") java.lang.Integer pessoaChaveCliente, Pageable pageable, PagedResourcesAssembler assembler) {
-    return new ResponseEntity<>(assembler.toResource(enderecoBusiness.findEnderecosByPessoa(pessoaChaveCliente, pageable)), HttpStatus.OK);
+  @RequestMapping(method = RequestMethod.GET, value="/Pessoa/{pessoaId}")    
+  public HttpEntity<PagedResources<Endereco>> findEnderecosByPessoa(@PathVariable("pessoaId") java.lang.Integer pessoaId, Pageable pageable, PagedResourcesAssembler assembler) {
+    return new ResponseEntity<>(assembler.toResource(enderecoBusiness.findEnderecosByPessoa(pessoaId, pageable)), HttpStatus.OK);
   }
 }

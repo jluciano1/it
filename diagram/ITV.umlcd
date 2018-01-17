@@ -28,7 +28,7 @@
       "type": "uml.Class",
       "name": "Pessoa",
       "attributes": [
-        "chaveCliente:java.lang.Integer",
+        "id:java.lang.Integer",
         "nomeCliente:java.lang.String",
         "cpf:java.lang.String",
         "rg:java.lang.String",
@@ -50,7 +50,8 @@
         "dadoPessoalSerasa:DadoPessoalSerasa",
         "dadoPessoalLinkedIn:DadoPessoalLinkedIn",
         "dadoPessoalFacebook:DadoPessoalFacebook",
-        "emailPes:java.lang.String"
+        "emailPes:java.lang.String",
+        "chaveCliente:java.lang.String"
       ],
       "methods": [
         "+ list(): List<Pessoa>",
@@ -62,7 +63,7 @@
       },
       "size": {
         "width": 279.640625,
-        "height": 360.58172607421875
+        "height": 371.5686950683594
       },
       "angle": 0,
       "multitenantContextJsonIgnore": "false",
@@ -94,14 +95,14 @@
       "id": "8b3adee7-a5e6-476a-8092-c8646a89c274",
       "fields": [
         {
-          "name": "chaveCliente",
+          "name": "id",
           "type": "java.lang.Integer",
           "dbName": "id",
           "dbLength": "",
           "dbPrecision": "",
           "dbScale": "",
           "dbDefaultValue": "",
-          "label": "Chave Cliente",
+          "label": "Id",
           "mask": "",
           "isPrimaryKey": true,
           "isUniqueKey": false,
@@ -621,6 +622,29 @@
           "isEncryption": false,
           "referencedColumnName": "",
           "isSearchable": false
+        },
+        {
+          "name": "chaveCliente",
+          "type": "java.lang.String",
+          "dbName": "chaveCliente",
+          "dbLength": "",
+          "dbPrecision": "",
+          "dbScale": "",
+          "dbDefaultValue": "",
+          "label": "Chave Cliente",
+          "mask": "",
+          "isPrimaryKey": false,
+          "isUniqueKey": false,
+          "isNullable": true,
+          "pkType": "",
+          "multitenantContext": "",
+          "jsonIgnore": false,
+          "isTransient": false,
+          "isInsertable": true,
+          "isUpdatable": true,
+          "isEncryption": false,
+          "referencedColumnName": "",
+          "isSearchable": false
         }
       ],
       "runtimeClass": "cronos.widgets.joint.uml.Class",
@@ -635,12 +659,12 @@
           "transform": "translate(0,0)"
         },
         ".uml-class-attrs-rect": {
-          "height": 490,
+          "height": 510,
           "transform": "translate(0,50)"
         },
         ".uml-class-methods-rect": {
           "height": 70,
-          "transform": "translate(0,540)"
+          "transform": "translate(0,560)"
         },
         ".uml-class-name-text": {
           "fill": "#000",
@@ -650,12 +674,12 @@
         },
         ".uml-class-attrs-text": {
           "font-size": 11,
-          "text": "chaveCliente\nnomeCliente\ncpf\nrg\nogExpe\ndtVen\nvlVenda\nparcelasAberto\nclienteVen\nfoneRes\nfoneCom\nfoneCel\nnomePai\nnomeMae\nestadoCivil\nnomeConjuge\ntipoPessoa\nnomeFantasia\ncnpj\ndadoPessoalSerasa\ndadoPessoalLinkedIn\ndadoPessoalFacebook\nemailPes\n"
+          "text": "id\nnomeCliente\ncpf\nrg\nogExpe\ndtVen\nvlVenda\nparcelasAberto\nclienteVen\nfoneRes\nfoneCom\nfoneCel\nnomePai\nnomeMae\nestadoCivil\nnomeConjuge\ntipoPessoa\nnomeFantasia\ncnpj\ndadoPessoalSerasa\ndadoPessoalLinkedIn\ndadoPessoalFacebook\nemailPes\nchaveCliente\n"
         },
         ".uml-class-attrs-value": {
           "ref-x": 147.40625,
           "font-size": 11,
-          "text": "java.lang.Integer\njava.lang.String\njava.lang.String\njava.lang.String\njava.lang.String\njava.util.Date\ndouble\nint\nint\njava.lang.String\njava.lang.String\njava.lang.String\njava.lang.String\njava.lang.String\njava.lang.String\njava.lang.String\njava.lang.String\njava.lang.String\njava.lang.String\nDadoPessoalSerasa\nDadoPessoalLinkedIn\nDadoPessoalFacebook\njava.lang.String\n"
+          "text": "java.lang.Integer\njava.lang.String\njava.lang.String\njava.lang.String\njava.lang.String\njava.util.Date\ndouble\nint\nint\njava.lang.String\njava.lang.String\njava.lang.String\njava.lang.String\njava.lang.String\njava.lang.String\njava.lang.String\njava.lang.String\njava.lang.String\njava.lang.String\nDadoPessoalSerasa\nDadoPessoalLinkedIn\nDadoPessoalFacebook\njava.lang.String\njava.lang.String\n"
         },
         ".uml-class-methods-text": {
           "fill": "#0066FF",

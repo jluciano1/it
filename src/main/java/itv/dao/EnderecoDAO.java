@@ -57,7 +57,7 @@ public interface EnderecoDAO extends JpaRepository<Endereco, java.lang.Integer> 
    * Foreign Key pessoa
    * @generated
    */
-  @Query("SELECT entity FROM Endereco entity WHERE entity.pessoa.chaveCliente = :chaveCliente")
-  public Page<Endereco> findEnderecosByPessoa(@Param(value="chaveCliente") java.lang.Integer chaveCliente, Pageable pageable);
+  @Query("SELECT entity FROM Endereco entity WHERE entity.pessoa.id = :id")
+  public Page<Endereco> findEnderecosByPessoa(@Param(value="id") java.lang.Integer id, Pageable pageable);
 
 }
