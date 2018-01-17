@@ -23,25 +23,25 @@ public interface PessoaDAO extends JpaRepository<Pessoa, java.lang.Integer> {
   /**
    * Obtém a instância de Pessoa utilizando os identificadores
    * 
-   * @param id
+   * @param chaveCliente
    *          Identificador 
    * @return Instância relacionada com o filtro indicado
    * @generated
    */    
-  @Query("SELECT entity FROM Pessoa entity WHERE entity.id = :id")
-  public Pessoa findOne(@Param(value="id") java.lang.Integer id);
+  @Query("SELECT entity FROM Pessoa entity WHERE entity.chaveCliente = :chaveCliente")
+  public Pessoa findOne(@Param(value="chaveCliente") java.lang.Integer chaveCliente);
 
   /**
    * Remove a instância de Pessoa utilizando os identificadores
    * 
-   * @param id
+   * @param chaveCliente
    *          Identificador 
    * @return Quantidade de modificações efetuadas
    * @generated
    */    
   @Modifying
-  @Query("DELETE FROM Pessoa entity WHERE entity.id = :id")
-  public void delete(@Param(value="id") java.lang.Integer id);
+  @Query("DELETE FROM Pessoa entity WHERE entity.chaveCliente = :chaveCliente")
+  public void delete(@Param(value="chaveCliente") java.lang.Integer chaveCliente);
 
   /**
    * Lista com paginação de acordo com a NamedQuery
@@ -56,7 +56,7 @@ public interface PessoaDAO extends JpaRepository<Pessoa, java.lang.Integer> {
    * 
    * @generated
    */
-  @Query("select p from Pessoa p where p.nome LIKE CONCAT('%', COALESCE(:nome, p.nome),'%')")
+  @Query("select p from Pessoa p where p.nomeCliente LIKE CONCAT('%', COALESCE(:nome, p.nomeCliente),'%')")
   public Page<Pessoa> listByNome(@Param(value="nome") java.lang.String nome, Pageable pageable);
   
 
@@ -65,7 +65,7 @@ public interface PessoaDAO extends JpaRepository<Pessoa, java.lang.Integer> {
    * OneToMany Relation
    * @generated
    */
-  @Query("SELECT entity FROM Endereco entity WHERE entity.pessoa.id = :id")
-  public Page<Endereco> findEndereco(@Param(value="id") java.lang.Integer id, Pageable pageable);
+  @Query("SELECT entity FROM Endereco entity WHERE entity.pessoa.chaveCliente = :chaveCliente")
+  public Page<Endereco> findEndereco(@Param(value="chaveCliente") java.lang.Integer chaveCliente, Pageable pageable);
 
 }

@@ -61,8 +61,8 @@ public class PessoaREST {
    * 
    * @generated
    */
-  @RequestMapping(method = RequestMethod.PUT, value = "/{pessoaId}")
-  public Pessoa put(@Validated @RequestBody final Pessoa entity, @PathVariable("pessoaId") java.lang.Integer pessoaId) throws Exception {
+  @RequestMapping(method = RequestMethod.PUT, value = "/{pessoaChaveCliente}")
+  public Pessoa put(@Validated @RequestBody final Pessoa entity, @PathVariable("pessoaChaveCliente") java.lang.Integer pessoaChaveCliente) throws Exception {
     return pessoaBusiness.put(entity);
   }  
 
@@ -71,9 +71,9 @@ public class PessoaREST {
    * 
    * @generated
    */
-  @RequestMapping(method = RequestMethod.DELETE, value = "/{pessoaId}")
-  public void delete(@PathVariable("pessoaId") java.lang.Integer pessoaId) throws Exception {
-    pessoaBusiness.delete(pessoaId);
+  @RequestMapping(method = RequestMethod.DELETE, value = "/{pessoaChaveCliente}")
+  public void delete(@PathVariable("pessoaChaveCliente") java.lang.Integer pessoaChaveCliente) throws Exception {
+    pessoaBusiness.delete(pessoaChaveCliente);
   }
 
   /**
@@ -98,16 +98,16 @@ public class PessoaREST {
    * OneToMany Relationship GET
    * @generated
    */
-  @RequestMapping(method = RequestMethod.GET, value="/{pessoaId}/Endereco")    
-  public HttpEntity<PagedResources<Endereco>> findEndereco(@PathVariable("pessoaId") java.lang.Integer pessoaId, Pageable pageable, PagedResourcesAssembler assembler) {
-    return new ResponseEntity<>(assembler.toResource(pessoaBusiness.findEndereco(pessoaId, pageable)), HttpStatus.OK);
+  @RequestMapping(method = RequestMethod.GET, value="/{pessoaChaveCliente}/Endereco")    
+  public HttpEntity<PagedResources<Endereco>> findEndereco(@PathVariable("pessoaChaveCliente") java.lang.Integer pessoaChaveCliente, Pageable pageable, PagedResourcesAssembler assembler) {
+    return new ResponseEntity<>(assembler.toResource(pessoaBusiness.findEndereco(pessoaChaveCliente, pageable)), HttpStatus.OK);
   }
 
   /**
    * OneToMany Relationship DELETE 
    * @generated
    */  
-  @RequestMapping(method = RequestMethod.DELETE, value="/{pessoaId}/Endereco/{enderecoId}")    
+  @RequestMapping(method = RequestMethod.DELETE, value="/{pessoaChaveCliente}/Endereco/{enderecoId}")    
   public void deleteEndereco(@PathVariable("enderecoId") java.lang.Integer enderecoId) throws Exception {
     this.enderecoBusiness.delete(enderecoId);
   }
@@ -116,8 +116,8 @@ public class PessoaREST {
    * OneToMany Relationship PUT
    * @generated
    */  
-  @RequestMapping(method = RequestMethod.PUT, value="/{pessoaId}/Endereco")
-  public Endereco putEndereco(@Validated @RequestBody final Endereco entity, @PathVariable("pessoaId") java.lang.Integer pessoaId) throws Exception {
+  @RequestMapping(method = RequestMethod.PUT, value="/{pessoaChaveCliente}/Endereco")
+  public Endereco putEndereco(@Validated @RequestBody final Endereco entity, @PathVariable("pessoaChaveCliente") java.lang.Integer pessoaChaveCliente) throws Exception {
     return this.enderecoBusiness.put(entity);
   }  
   
@@ -125,9 +125,9 @@ public class PessoaREST {
    * OneToMany Relationship POST
    * @generated
    */  
-  @RequestMapping(method = RequestMethod.POST, value="/{pessoaId}/Endereco")
-  public Endereco postEndereco(@Validated @RequestBody final Endereco entity, @PathVariable("pessoaId") java.lang.Integer pessoaId) throws Exception {
-    Pessoa pessoa = this.pessoaBusiness.get(pessoaId);
+  @RequestMapping(method = RequestMethod.POST, value="/{pessoaChaveCliente}/Endereco")
+  public Endereco postEndereco(@Validated @RequestBody final Endereco entity, @PathVariable("pessoaChaveCliente") java.lang.Integer pessoaChaveCliente) throws Exception {
+    Pessoa pessoa = this.pessoaBusiness.get(pessoaChaveCliente);
     entity.setPessoa(pessoa);
     return this.enderecoBusiness.post(entity);
   }
@@ -137,8 +137,8 @@ public class PessoaREST {
    * 
    * @generated
    */
-  @RequestMapping(method = RequestMethod.GET, value = "/{pessoaId}")
-  public Pessoa get(@PathVariable("pessoaId") java.lang.Integer pessoaId) throws Exception {
-    return pessoaBusiness.get(pessoaId);
+  @RequestMapping(method = RequestMethod.GET, value = "/{pessoaChaveCliente}")
+  public Pessoa get(@PathVariable("pessoaChaveCliente") java.lang.Integer pessoaChaveCliente) throws Exception {
+    return pessoaBusiness.get(pessoaChaveCliente);
   }
 }

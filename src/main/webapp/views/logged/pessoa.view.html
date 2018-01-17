@@ -10,74 +10,68 @@
 <!-- fim div row para pesquisa -->
 <!--</div>-->
 
-<datasource filter="" name="Pessoa" entity="api/rest/itv/Pessoa" keys="id" rows-per-page="100" delete-message="Deseja remover?" class=""></datasource>
+<datasource filter="" name="Pessoa" entity="api/rest/itv/Pessoa" keys="chaveCliente" rows-per-page="100" delete-message="Deseja remover?" class=""></datasource>
 <div class="component-holder" data-component="crn-grid" id="crn-grid-Pessoa">
     <div crn-datasource="Pessoa" class="" ng-hide="Pessoa.editing || Pessoa.inserting">
         <table class="table  table-bordered table-hover table-striped">
             <thead>
             <tr class="table-header">
                 <th class="">
-                    <div class="">Id</div>
+                    <div class="">Chave Cliente</div>
                 </th>
                 <th class="">
-                    <div class="">Nome</div>
+                    <div class="">Nome Cliente</div>
                 </th>
                 <th class="">
                     <div class="">Cpf</div>
                 </th>
                 <th class="">
-                    <div class="">Email</div>
+                    <div class="">Rg</div>
                 </th>
                 <th class="">
-                    <div class="">Dt Cadastro</div>
+                    <div class="">Og Expe</div>
                 </th>
                 <th class="">
-                    <div class="">Dt Nascimento</div>
+                    <div class="">Dt Ven</div>
                 </th>
                 <th class="">
-                    <div class="">Cadastrante</div>
+                    <div class="">Vl Venda</div>
                 </th>
                 <th class="">
-                    <div class="">Alterado Por</div>
+                    <div class="">Parcelas Aberto</div>
                 </th>
                 <th class="">
-                    <div class="">Contato 1</div>
+                    <div class="">Cliente Ven</div>
                 </th>
                 <th class="">
-                    <div class="">Contato 2</div>
+                    <div class="">Fone Res</div>
                 </th>
                 <th class="">
-                    <div class="">Preferencial Goiania</div>
+                    <div class="">Fone Com</div>
                 </th>
                 <th class="">
-                    <div class="">Substituto Trib</div>
+                    <div class="">Fone Cel</div>
                 </th>
                 <th class="">
-                    <div class="">Status</div>
+                    <div class="">Nome Pai</div>
                 </th>
                 <th class="">
-                    <div class="">Interno Externo</div>
+                    <div class="">Nome Mae</div>
                 </th>
                 <th class="">
-                    <div class="">Natureza</div>
+                    <div class="">Estado Civil</div>
                 </th>
                 <th class="">
-                    <div class="">Tipo Cliente</div>
+                    <div class="">Nome Conjuge</div>
+                </th>
+                <th class="">
+                    <div class="">Tipo Pessoa</div>
                 </th>
                 <th class="">
                     <div class="">Nome Fantasia</div>
                 </th>
                 <th class="">
-                    <div class="">Inscr Estadual</div>
-                </th>
-                <th class="">
-                    <div class="">Inscr Municial</div>
-                </th>
-                <th class="">
                     <div class="">Cnpj</div>
-                </th>
-                <th class="">
-                    <div class="">Dt Alteracao</div>
                 </th>
                 <th class="">
                     <div class="">DadoPessoalSerasa</div>
@@ -89,7 +83,7 @@
                     <div class="">Dado Pessoal Facebook</div>
                 </th>
                 <th class="">
-                    <div class="">Tipo</div>
+                    <div class="">Email Pes</div>
                 </th>
                 <th class="">
                     <div class="">{{"template.crud.actions" | translate}}</div>
@@ -100,12 +94,12 @@
             <tr class="table-content" ng-repeat="rowData in datasource.data">
                 <td class="">
                     <div class="">
-                                {{rowData.id  }}
+                                {{rowData.chaveCliente  }}
                     </div>
                 </td>
                 <td class="">
                     <div class="">
-                                {{rowData.nome  }}
+                                {{rowData.nomeCliente  }}
                     </div>
                 </td>
                 <td class="">
@@ -115,67 +109,72 @@
                 </td>
                 <td class="">
                     <div class="">
-                                {{rowData.email  }}
+                                {{rowData.rg  }}
                     </div>
                 </td>
                 <td class="">
                     <div class="">
-                                {{rowData.dtCadastro | date:'dd/MM/yyyy'}}
+                                {{rowData.ogExpe  }}
                     </div>
                 </td>
                 <td class="">
                     <div class="">
-                                {{rowData.dtNascimento | date:'dd/MM/yyyy'}}
+                                {{rowData.dtVen | date:'dd/MM/yyyy'}}
                     </div>
                 </td>
                 <td class="">
                     <div class="">
-                                {{rowData.cadastrante  }}
+                                {{rowData.vlVenda  }}
                     </div>
                 </td>
                 <td class="">
                     <div class="">
-                                {{rowData.alteradoPor  }}
+                                {{rowData.parcelasAberto  }}
                     </div>
                 </td>
                 <td class="">
                     <div class="">
-                                {{rowData.contato1  }}
+                                {{rowData.clienteVen  }}
                     </div>
                 </td>
                 <td class="">
                     <div class="">
-                                {{rowData.contato2  }}
+                                {{rowData.foneRes  }}
                     </div>
                 </td>
                 <td class="">
                     <div class="">
-                                {{rowData.preferencialGoiania  }}
+                                {{rowData.foneCom  }}
                     </div>
                 </td>
                 <td class="">
                     <div class="">
-                                {{rowData.substitutoTrib  }}
+                                {{rowData.foneCel  }}
                     </div>
                 </td>
                 <td class="">
                     <div class="">
-                                {{rowData.status  }}
+                                {{rowData.nomePai  }}
                     </div>
                 </td>
                 <td class="">
                     <div class="">
-                                {{rowData.internoExterno  }}
+                                {{rowData.nomeMae  }}
                     </div>
                 </td>
                 <td class="">
                     <div class="">
-                                {{rowData.natureza  }}
+                                {{rowData.estadoCivil  }}
                     </div>
                 </td>
                 <td class="">
                     <div class="">
-                                {{rowData.tipoCliente  }}
+                                {{rowData.nomeConjuge  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.tipoPessoa  }}
                     </div>
                 </td>
                 <td class="">
@@ -185,22 +184,7 @@
                 </td>
                 <td class="">
                     <div class="">
-                                {{rowData.inscrEstadual  }}
-                    </div>
-                </td>
-                <td class="">
-                    <div class="">
-                                {{rowData.inscrMunicial  }}
-                    </div>
-                </td>
-                <td class="">
-                    <div class="">
                                 {{rowData.cnpj  }}
-                    </div>
-                </td>
-                <td class="">
-                    <div class="">
-                                {{rowData.dtAlteracao  }}
                     </div>
                 </td>
                 <td class="">
@@ -220,7 +204,7 @@
                 </td>
                 <td class="">
                     <div class="">
-                                {{rowData.tipo  }}
+                                {{rowData.emailPes  }}
                     </div>
                 </td>
                 <td class="">
@@ -254,16 +238,16 @@
             <br/>
             <fieldset ng-disabled="!datasource.editing &amp;&amp; !datasource.inserting">
 
-                <div data-component="crn-textinput" id="crn-textinput-nome" class="">
+                <div data-component="crn-textinput" id="crn-textinput-nomeCliente" class="">
                     <div class="form-group">
-                        <label for="textinput-nome" class="">Nome</label>
+                        <label for="textinput-nomeCliente" class="">Nome Cliente</label>
 
                                 <input
                                             type="text"
-                                            ng-model="Pessoa.active.nome"
+                                            ng-model="Pessoa.active.nomeCliente"
                                             class="form-control"
-                                            id="textinput-nome"
-                                            placeholder="Nome"
+                                            id="textinput-nomeCliente"
+                                            placeholder="Nome Cliente"
                                             >
                          <!-- end if !model.hasCronappFramework() -->
                     </div>
@@ -284,192 +268,191 @@
                     </div>
                 </div>
 
-                <div data-component="crn-textinput" id="crn-textinput-email" class="">
+                <div data-component="crn-textinput" id="crn-textinput-rg" class="">
                     <div class="form-group">
-                        <label for="textinput-email" class="">Email</label>
+                        <label for="textinput-rg" class="">Rg</label>
 
                                 <input
                                             type="text"
-                                            ng-model="Pessoa.active.email"
+                                            ng-model="Pessoa.active.rg"
                                             class="form-control"
-                                            id="textinput-email"
-                                            placeholder="Email"
+                                            id="textinput-rg"
+                                            placeholder="Rg"
                                             >
                          <!-- end if !model.hasCronappFramework() -->
                     </div>
                 </div>
 
-                <div data-component="crn-textinput" id="crn-textinput-dtCadastro" class="">
+                <div data-component="crn-textinput" id="crn-textinput-ogExpe" class="">
                     <div class="form-group">
-                        <label for="textinput-dtCadastro" class="">Dt Cadastro</label>
+                        <label for="textinput-ogExpe" class="">Og Expe</label>
+
+                                <input
+                                            type="text"
+                                            ng-model="Pessoa.active.ogExpe"
+                                            class="form-control"
+                                            id="textinput-ogExpe"
+                                            placeholder="Og Expe"
+                                            >
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-dtVen" class="">
+                    <div class="form-group">
+                        <label for="textinput-dtVen" class="">Dt Ven</label>
 
                                 <div style="position:relative">
                                     <input type="text" as-date
                                            format="DD/MM/YYYY"
-                                           ng-model="Pessoa.active.dtCadastro" class="form-control" id="textinput-dtCadastro" placeholder="Dt Cadastro" >
+                                           ng-model="Pessoa.active.dtVen" class="form-control" id="textinput-dtVen" placeholder="Dt Ven" >
                                 </div>
                          <!-- end if !model.hasCronappFramework() -->
                     </div>
                 </div>
 
-                <div data-component="crn-textinput" id="crn-textinput-dtNascimento" class="">
+                <div data-component="crn-textinput" id="crn-textinput-vlVenda" class="">
                     <div class="form-group">
-                        <label for="textinput-dtNascimento" class="">Dt Nascimento</label>
+                        <label for="textinput-vlVenda" class="">Vl Venda</label>
 
-                                <div style="position:relative">
-                                    <input type="text" as-date
-                                           format="DD/MM/YYYY"
-                                           ng-model="Pessoa.active.dtNascimento" class="form-control" id="textinput-dtNascimento" placeholder="Dt Nascimento" >
-                                </div>
+                                <input type="number" step="0.01" ng-model="Pessoa.active.vlVenda" class="form-control" id="textinput-vlVenda" placeholder="Vl Venda" >
                          <!-- end if !model.hasCronappFramework() -->
                     </div>
                 </div>
 
-                <div data-component="crn-textinput" id="crn-textinput-cadastrante" class="">
+                <div data-component="crn-textinput" id="crn-textinput-parcelasAberto" class="">
                     <div class="form-group">
-                        <label for="textinput-cadastrante" class="">Cadastrante</label>
+                        <label for="textinput-parcelasAberto" class="">Parcelas Aberto</label>
+
+                                <input type="number"  ng-model="Pessoa.active.parcelasAberto" class="form-control" id="textinput-parcelasAberto" placeholder="Parcelas Aberto" >
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-clienteVen" class="">
+                    <div class="form-group">
+                        <label for="textinput-clienteVen" class="">Cliente Ven</label>
+
+                                <input type="number"  ng-model="Pessoa.active.clienteVen" class="form-control" id="textinput-clienteVen" placeholder="Cliente Ven" >
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-foneRes" class="">
+                    <div class="form-group">
+                        <label for="textinput-foneRes" class="">Fone Res</label>
 
                                 <input
                                             type="text"
-                                            ng-model="Pessoa.active.cadastrante"
+                                            ng-model="Pessoa.active.foneRes"
                                             class="form-control"
-                                            id="textinput-cadastrante"
-                                            placeholder="Cadastrante"
+                                            id="textinput-foneRes"
+                                            placeholder="Fone Res"
                                             >
                          <!-- end if !model.hasCronappFramework() -->
                     </div>
                 </div>
 
-                <div data-component="crn-textinput" id="crn-textinput-alteradoPor" class="">
+                <div data-component="crn-textinput" id="crn-textinput-foneCom" class="">
                     <div class="form-group">
-                        <label for="textinput-alteradoPor" class="">Alterado Por</label>
+                        <label for="textinput-foneCom" class="">Fone Com</label>
 
                                 <input
                                             type="text"
-                                            ng-model="Pessoa.active.alteradoPor"
+                                            ng-model="Pessoa.active.foneCom"
                                             class="form-control"
-                                            id="textinput-alteradoPor"
-                                            placeholder="Alterado Por"
+                                            id="textinput-foneCom"
+                                            placeholder="Fone Com"
                                             >
                          <!-- end if !model.hasCronappFramework() -->
                     </div>
                 </div>
 
-                <div data-component="crn-textinput" id="crn-textinput-contato1" class="">
+                <div data-component="crn-textinput" id="crn-textinput-foneCel" class="">
                     <div class="form-group">
-                        <label for="textinput-contato1" class="">Contato 1</label>
+                        <label for="textinput-foneCel" class="">Fone Cel</label>
 
                                 <input
                                             type="text"
-                                            ng-model="Pessoa.active.contato1"
+                                            ng-model="Pessoa.active.foneCel"
                                             class="form-control"
-                                            id="textinput-contato1"
-                                            placeholder="Contato 1"
+                                            id="textinput-foneCel"
+                                            placeholder="Fone Cel"
                                             >
                          <!-- end if !model.hasCronappFramework() -->
                     </div>
                 </div>
 
-                <div data-component="crn-textinput" id="crn-textinput-contato2" class="">
+                <div data-component="crn-textinput" id="crn-textinput-nomePai" class="">
                     <div class="form-group">
-                        <label for="textinput-contato2" class="">Contato 2</label>
+                        <label for="textinput-nomePai" class="">Nome Pai</label>
 
                                 <input
                                             type="text"
-                                            ng-model="Pessoa.active.contato2"
+                                            ng-model="Pessoa.active.nomePai"
                                             class="form-control"
-                                            id="textinput-contato2"
-                                            placeholder="Contato 2"
+                                            id="textinput-nomePai"
+                                            placeholder="Nome Pai"
                                             >
                          <!-- end if !model.hasCronappFramework() -->
                     </div>
                 </div>
 
-                <div data-component="crn-textinput" id="crn-textinput-preferencialGoiania" class="">
+                <div data-component="crn-textinput" id="crn-textinput-nomeMae" class="">
                     <div class="form-group">
-                        <label for="textinput-preferencialGoiania" class="">Preferencial Goiania</label>
+                        <label for="textinput-nomeMae" class="">Nome Mae</label>
 
                                 <input
                                             type="text"
-                                            ng-model="Pessoa.active.preferencialGoiania"
+                                            ng-model="Pessoa.active.nomeMae"
                                             class="form-control"
-                                            id="textinput-preferencialGoiania"
-                                            placeholder="Preferencial Goiania"
+                                            id="textinput-nomeMae"
+                                            placeholder="Nome Mae"
                                             >
                          <!-- end if !model.hasCronappFramework() -->
                     </div>
                 </div>
 
-                <div data-component="crn-textinput" id="crn-textinput-substitutoTrib" class="">
+                <div data-component="crn-textinput" id="crn-textinput-estadoCivil" class="">
                     <div class="form-group">
-                        <label for="textinput-substitutoTrib" class="">Substituto Trib</label>
+                        <label for="textinput-estadoCivil" class="">Estado Civil</label>
 
                                 <input
                                             type="text"
-                                            ng-model="Pessoa.active.substitutoTrib"
+                                            ng-model="Pessoa.active.estadoCivil"
                                             class="form-control"
-                                            id="textinput-substitutoTrib"
-                                            placeholder="Substituto Trib"
+                                            id="textinput-estadoCivil"
+                                            placeholder="Estado Civil"
                                             >
                          <!-- end if !model.hasCronappFramework() -->
                     </div>
                 </div>
 
-                <div data-component="crn-textinput" id="crn-textinput-status" class="">
+                <div data-component="crn-textinput" id="crn-textinput-nomeConjuge" class="">
                     <div class="form-group">
-                        <label for="textinput-status" class="">Status</label>
+                        <label for="textinput-nomeConjuge" class="">Nome Conjuge</label>
 
                                 <input
                                             type="text"
-                                            ng-model="Pessoa.active.status"
+                                            ng-model="Pessoa.active.nomeConjuge"
                                             class="form-control"
-                                            id="textinput-status"
-                                            placeholder="Status"
+                                            id="textinput-nomeConjuge"
+                                            placeholder="Nome Conjuge"
                                             >
                          <!-- end if !model.hasCronappFramework() -->
                     </div>
                 </div>
 
-                <div data-component="crn-textinput" id="crn-textinput-internoExterno" class="">
+                <div data-component="crn-textinput" id="crn-textinput-tipoPessoa" class="">
                     <div class="form-group">
-                        <label for="textinput-internoExterno" class="">Interno Externo</label>
+                        <label for="textinput-tipoPessoa" class="">Tipo Pessoa</label>
 
                                 <input
                                             type="text"
-                                            ng-model="Pessoa.active.internoExterno"
+                                            ng-model="Pessoa.active.tipoPessoa"
                                             class="form-control"
-                                            id="textinput-internoExterno"
-                                            placeholder="Interno Externo"
-                                            >
-                         <!-- end if !model.hasCronappFramework() -->
-                    </div>
-                </div>
-
-                <div data-component="crn-textinput" id="crn-textinput-natureza" class="">
-                    <div class="form-group">
-                        <label for="textinput-natureza" class="">Natureza</label>
-
-                                <input
-                                            type="text"
-                                            ng-model="Pessoa.active.natureza"
-                                            class="form-control"
-                                            id="textinput-natureza"
-                                            placeholder="Natureza"
-                                            >
-                         <!-- end if !model.hasCronappFramework() -->
-                    </div>
-                </div>
-
-                <div data-component="crn-textinput" id="crn-textinput-tipoCliente" class="">
-                    <div class="form-group">
-                        <label for="textinput-tipoCliente" class="">Tipo Cliente</label>
-
-                                <input
-                                            type="text"
-                                            ng-model="Pessoa.active.tipoCliente"
-                                            class="form-control"
-                                            id="textinput-tipoCliente"
-                                            placeholder="Tipo Cliente"
+                                            id="textinput-tipoPessoa"
+                                            placeholder="Tipo Pessoa"
                                             >
                          <!-- end if !model.hasCronappFramework() -->
                     </div>
@@ -490,36 +473,6 @@
                     </div>
                 </div>
 
-                <div data-component="crn-textinput" id="crn-textinput-inscrEstadual" class="">
-                    <div class="form-group">
-                        <label for="textinput-inscrEstadual" class="">Inscr Estadual</label>
-
-                                <input
-                                            type="text"
-                                            ng-model="Pessoa.active.inscrEstadual"
-                                            class="form-control"
-                                            id="textinput-inscrEstadual"
-                                            placeholder="Inscr Estadual"
-                                            >
-                         <!-- end if !model.hasCronappFramework() -->
-                    </div>
-                </div>
-
-                <div data-component="crn-textinput" id="crn-textinput-inscrMunicial" class="">
-                    <div class="form-group">
-                        <label for="textinput-inscrMunicial" class="">Inscr Municial</label>
-
-                                <input
-                                            type="text"
-                                            ng-model="Pessoa.active.inscrMunicial"
-                                            class="form-control"
-                                            id="textinput-inscrMunicial"
-                                            placeholder="Inscr Municial"
-                                            >
-                         <!-- end if !model.hasCronappFramework() -->
-                    </div>
-                </div>
-
                 <div data-component="crn-textinput" id="crn-textinput-cnpj" class="">
                     <div class="form-group">
                         <label for="textinput-cnpj" class="">Cnpj</label>
@@ -530,21 +483,6 @@
                                             class="form-control"
                                             id="textinput-cnpj"
                                             placeholder="Cnpj"
-                                            >
-                         <!-- end if !model.hasCronappFramework() -->
-                    </div>
-                </div>
-
-                <div data-component="crn-textinput" id="crn-textinput-dtAlteracao" class="">
-                    <div class="form-group">
-                        <label for="textinput-dtAlteracao" class="">Dt Alteracao</label>
-
-                                <input
-                                            type="text"
-                                            ng-model="Pessoa.active.dtAlteracao"
-                                            class="form-control"
-                                            id="textinput-dtAlteracao"
-                                            placeholder="Dt Alteracao"
                                             >
                          <!-- end if !model.hasCronappFramework() -->
                     </div>
@@ -607,16 +545,16 @@
                     </div>
                 </div>
 
-                <div data-component="crn-textinput" id="crn-textinput-tipo" class="">
+                <div data-component="crn-textinput" id="crn-textinput-emailPes" class="">
                     <div class="form-group">
-                        <label for="textinput-tipo" class="">Tipo</label>
+                        <label for="textinput-emailPes" class="">Email Pes</label>
 
                                 <input
                                             type="text"
-                                            ng-model="Pessoa.active.tipo"
+                                            ng-model="Pessoa.active.emailPes"
                                             class="form-control"
-                                            id="textinput-tipo"
-                                            placeholder="Tipo"
+                                            id="textinput-emailPes"
+                                            placeholder="Email Pes"
                                             >
                          <!-- end if !model.hasCronappFramework() -->
                     </div>

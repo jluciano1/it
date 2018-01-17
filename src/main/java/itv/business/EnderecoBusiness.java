@@ -105,10 +105,10 @@ public class EnderecoBusiness {
    * Foreign Key pessoa
    * @generated
    */
-  public Page<Endereco> findEnderecosByPessoa(java.lang.Integer instanceId, Pageable pageable) {
+  public Page<Endereco> findEnderecosByPessoa(java.lang.Integer instanceChaveCliente, Pageable pageable) {
     // begin-user-code
     // end-user-code  
-    Page<Endereco> result = repository.findEnderecosByPessoa(instanceId, pageable);
+    Page<Endereco> result = repository.findEnderecosByPessoa(instanceChaveCliente, pageable);
     // begin-user-code  
     // end-user-code        
     return result;

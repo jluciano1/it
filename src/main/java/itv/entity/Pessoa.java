@@ -26,13 +26,13 @@ public class Pessoa implements Serializable {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   @Column(name = "id", nullable = false, insertable=true, updatable=true)
-  private java.lang.Integer id;
+  private java.lang.Integer chaveCliente;
   
   /**
   * @generated
   */
-  @Column(name = "nome", nullable = true, unique = false, insertable=true, updatable=true)
-  private java.lang.String nome;
+  @Column(name = "nomeCliente", nullable = true, unique = false, insertable=true, updatable=true)
+  private java.lang.String nomeCliente;
   
   /**
   * @generated
@@ -43,82 +43,87 @@ public class Pessoa implements Serializable {
   /**
   * @generated
   */
-  @Column(name = "email", nullable = true, unique = false, insertable=true, updatable=true)
-  private java.lang.String email;
+  @Column(name = "rg", nullable = true, unique = false, insertable=true, updatable=true)
+  private java.lang.String rg;
+  
+  /**
+  * @generated
+  */
+  @Column(name = "ogExpe", nullable = true, unique = false, insertable=true, updatable=true)
+  private java.lang.String ogExpe;
   
   /**
   * @generated
   */
   @Temporal(TemporalType.DATE)
-  @Column(name = "dtCadastro", nullable = true, unique = false, insertable=true, updatable=true)
-  private java.util.Date dtCadastro;
+  @Column(name = "dtVen", nullable = true, unique = false, insertable=true, updatable=true)
+  private java.util.Date dtVen;
   
   /**
   * @generated
   */
-  @Temporal(TemporalType.DATE)
-  @Column(name = "dtNascimento", nullable = true, unique = false, insertable=true, updatable=true)
-  private java.util.Date dtNascimento;
+  @Column(name = "vlVenda", nullable = true, unique = false, insertable=true, updatable=true)
+  private double vlVenda;
   
   /**
   * @generated
   */
-  @Column(name = "cadastrante", nullable = true, unique = false, insertable=true, updatable=true)
-  private java.lang.String cadastrante;
+  @Column(name = "parcelasAberto", nullable = true, unique = false, insertable=true, updatable=true)
+  private int parcelasAberto;
   
   /**
   * @generated
   */
-  @Column(name = "alteradoPor", nullable = true, unique = false, insertable=true, updatable=true)
-  private java.lang.String alteradoPor;
+  @Column(name = "clienteVen", nullable = true, unique = false, insertable=true, updatable=true)
+  private int clienteVen;
   
   /**
   * @generated
   */
-  @Column(name = "contato1", nullable = true, unique = false, insertable=true, updatable=true)
-  private java.lang.String contato1;
+  @Column(name = "foneRes", nullable = true, unique = false, insertable=true, updatable=true)
+  private java.lang.String foneRes;
   
   /**
   * @generated
   */
-  @Column(name = "contato2", nullable = true, unique = false, insertable=true, updatable=true)
-  private java.lang.String contato2;
+  @Column(name = "foneCom", nullable = true, unique = false, insertable=true, updatable=true)
+  private java.lang.String foneCom;
   
   /**
   * @generated
   */
-  @Column(name = "preferencialGoiania", nullable = true, unique = false, insertable=true, updatable=true)
-  private java.lang.String preferencialGoiania;
+  @Column(name = "foneCel", nullable = true, unique = false, insertable=true, updatable=true)
+  private java.lang.String foneCel;
   
   /**
   * @generated
   */
-  @Column(name = "substitutoTrib", nullable = true, unique = false, insertable=true, updatable=true)
-  private java.lang.String substitutoTrib;
+  @Column(name = "nomePai", nullable = true, unique = false, insertable=true, updatable=true)
+  private java.lang.String nomePai;
   
   /**
   * @generated
   */
-  @Column(name = "status", nullable = true, unique = false, insertable=true, updatable=true)
-  private java.lang.String status;
+  @Column(name = "nomeMae", nullable = true, unique = false, insertable=true, updatable=true)
+  private java.lang.String nomeMae;
   
   /**
   * @generated
   */
-  @Column(name = "internoExterno", nullable = true, unique = false, insertable=true, updatable=true)
-  private java.lang.String internoExterno;
+  @Column(name = "estadoCivil", nullable = true, unique = false, insertable=true, updatable=true)
+  private java.lang.String estadoCivil;
   
   /**
   * @generated
   */
-  @Column(name = "natureza", nullable = true, unique = false, insertable=true, updatable=true)
-  private java.lang.String natureza;
+  @Column(name = "nomeConjuge", nullable = true, unique = false, insertable=true, updatable=true)
+  private java.lang.String nomeConjuge;
   
   /**
   * @generated
   */
   @Column(name = "tipoPessoa", nullable = true, unique = false, insertable=true, updatable=true)
-  private java.lang.String tipoCliente;
+  private java.lang.String tipoPessoa;
   
   /**
   * @generated
@@ -129,26 +134,8 @@ public class Pessoa implements Serializable {
   /**
   * @generated
   */
-  @Column(name = "inscrEstadual", nullable = true, unique = false, insertable=true, updatable=true)
-  private java.lang.String inscrEstadual;
-  
-  /**
-  * @generated
-  */
-  @Column(name = "inscrMunicial", nullable = true, unique = false, insertable=true, updatable=true)
-  private java.lang.String inscrMunicial;
-  
-  /**
-  * @generated
-  */
   @Column(name = "cnpj", nullable = true, unique = false, insertable=true, updatable=true)
   private java.lang.String cnpj;
-  
-  /**
-  * @generated
-  */
-  @Column(name = "dtAlteracao", nullable = true, unique = false, insertable=true, updatable=true)
-  private java.lang.String dtAlteracao;
   
   /**
   * @generated
@@ -174,8 +161,8 @@ public class Pessoa implements Serializable {
   /**
   * @generated
   */
-  @Column(name = "tipo", nullable = true, unique = false, insertable=true, updatable=true)
-  private java.lang.String tipo;
+  @Column(name = "emailPes", nullable = true, unique = false, insertable=true, updatable=true)
+  private java.lang.String emailPes;
   
   /**
    * Construtor
@@ -186,40 +173,40 @@ public class Pessoa implements Serializable {
 
   
   /**
-   * Obtém id
-   * return id
+   * Obtém chaveCliente
+   * return chaveCliente
    * @generated
    */
-  public java.lang.Integer getId(){
-    return this.id;
+  public java.lang.Integer getChaveCliente(){
+    return this.chaveCliente;
   }
   
   /**
-   * Define id
-   * @param id id
+   * Define chaveCliente
+   * @param chaveCliente chaveCliente
    * @generated
    */
-  public Pessoa setId(java.lang.Integer id){
-    this.id = id;
+  public Pessoa setChaveCliente(java.lang.Integer chaveCliente){
+    this.chaveCliente = chaveCliente;
     return this;
   }
   
   /**
-   * Obtém nome
-   * return nome
+   * Obtém nomeCliente
+   * return nomeCliente
    * @generated
    */
-  public java.lang.String getNome(){
-    return this.nome;
+  public java.lang.String getNomeCliente(){
+    return this.nomeCliente;
   }
   
   /**
-   * Define nome
-   * @param nome nome
+   * Define nomeCliente
+   * @param nomeCliente nomeCliente
    * @generated
    */
-  public Pessoa setNome(java.lang.String nome){
-    this.nome = nome;
+  public Pessoa setNomeCliente(java.lang.String nomeCliente){
+    this.nomeCliente = nomeCliente;
     return this;
   }
   
@@ -243,249 +230,268 @@ public class Pessoa implements Serializable {
   }
   
   /**
-   * Obtém email
-   * return email
+   * Obtém rg
+   * return rg
    * @generated
    */
-  public java.lang.String getEmail(){
-    return this.email;
+  public java.lang.String getRg(){
+    return this.rg;
   }
   
   /**
-   * Define email
-   * @param email email
+   * Define rg
+   * @param rg rg
    * @generated
    */
-  public Pessoa setEmail(java.lang.String email){
-    this.email = email;
+  public Pessoa setRg(java.lang.String rg){
+    this.rg = rg;
     return this;
   }
   
   /**
-   * Obtém dtCadastro
-   * return dtCadastro
+   * Obtém ogExpe
+   * return ogExpe
    * @generated
    */
-  public java.util.Date getDtCadastro(){
-    return this.dtCadastro;
+  public java.lang.String getOgExpe(){
+    return this.ogExpe;
   }
   
   /**
-   * Define dtCadastro
-   * @param dtCadastro dtCadastro
+   * Define ogExpe
+   * @param ogExpe ogExpe
    * @generated
    */
-  public Pessoa setDtCadastro(java.util.Date dtCadastro){
-    this.dtCadastro = dtCadastro;
+  public Pessoa setOgExpe(java.lang.String ogExpe){
+    this.ogExpe = ogExpe;
     return this;
   }
   
   /**
-   * Obtém dtNascimento
-   * return dtNascimento
+   * Obtém dtVen
+   * return dtVen
    * @generated
    */
-  public java.util.Date getDtNascimento(){
-    return this.dtNascimento;
+  public java.util.Date getDtVen(){
+    return this.dtVen;
   }
   
   /**
-   * Define dtNascimento
-   * @param dtNascimento dtNascimento
+   * Define dtVen
+   * @param dtVen dtVen
    * @generated
    */
-  public Pessoa setDtNascimento(java.util.Date dtNascimento){
-    this.dtNascimento = dtNascimento;
+  public Pessoa setDtVen(java.util.Date dtVen){
+    this.dtVen = dtVen;
     return this;
   }
   
   /**
-   * Obtém cadastrante
-   * return cadastrante
+   * Obtém vlVenda
+   * return vlVenda
    * @generated
    */
-  public java.lang.String getCadastrante(){
-    return this.cadastrante;
+  public double getVlVenda(){
+    return this.vlVenda;
   }
   
   /**
-   * Define cadastrante
-   * @param cadastrante cadastrante
+   * Define vlVenda
+   * @param vlVenda vlVenda
    * @generated
    */
-  public Pessoa setCadastrante(java.lang.String cadastrante){
-    this.cadastrante = cadastrante;
+  public Pessoa setVlVenda(double vlVenda){
+    this.vlVenda = vlVenda;
     return this;
   }
   
   /**
-   * Obtém alteradoPor
-   * return alteradoPor
+   * Obtém parcelasAberto
+   * return parcelasAberto
    * @generated
    */
-  public java.lang.String getAlteradoPor(){
-    return this.alteradoPor;
+  public int getParcelasAberto(){
+    return this.parcelasAberto;
   }
   
   /**
-   * Define alteradoPor
-   * @param alteradoPor alteradoPor
+   * Define parcelasAberto
+   * @param parcelasAberto parcelasAberto
    * @generated
    */
-  public Pessoa setAlteradoPor(java.lang.String alteradoPor){
-    this.alteradoPor = alteradoPor;
+  public Pessoa setParcelasAberto(int parcelasAberto){
+    this.parcelasAberto = parcelasAberto;
     return this;
   }
   
   /**
-   * Obtém contato1
-   * return contato1
+   * Obtém clienteVen
+   * return clienteVen
    * @generated
    */
-  public java.lang.String getContato1(){
-    return this.contato1;
+  public int getClienteVen(){
+    return this.clienteVen;
   }
   
   /**
-   * Define contato1
-   * @param contato1 contato1
+   * Define clienteVen
+   * @param clienteVen clienteVen
    * @generated
    */
-  public Pessoa setContato1(java.lang.String contato1){
-    this.contato1 = contato1;
+  public Pessoa setClienteVen(int clienteVen){
+    this.clienteVen = clienteVen;
     return this;
   }
   
   /**
-   * Obtém contato2
-   * return contato2
+   * Obtém foneRes
+   * return foneRes
    * @generated
    */
-  public java.lang.String getContato2(){
-    return this.contato2;
+  public java.lang.String getFoneRes(){
+    return this.foneRes;
   }
   
   /**
-   * Define contato2
-   * @param contato2 contato2
+   * Define foneRes
+   * @param foneRes foneRes
    * @generated
    */
-  public Pessoa setContato2(java.lang.String contato2){
-    this.contato2 = contato2;
+  public Pessoa setFoneRes(java.lang.String foneRes){
+    this.foneRes = foneRes;
     return this;
   }
   
   /**
-   * Obtém preferencialGoiania
-   * return preferencialGoiania
+   * Obtém foneCom
+   * return foneCom
    * @generated
    */
-  public java.lang.String getPreferencialGoiania(){
-    return this.preferencialGoiania;
+  public java.lang.String getFoneCom(){
+    return this.foneCom;
   }
   
   /**
-   * Define preferencialGoiania
-   * @param preferencialGoiania preferencialGoiania
+   * Define foneCom
+   * @param foneCom foneCom
    * @generated
    */
-  public Pessoa setPreferencialGoiania(java.lang.String preferencialGoiania){
-    this.preferencialGoiania = preferencialGoiania;
+  public Pessoa setFoneCom(java.lang.String foneCom){
+    this.foneCom = foneCom;
     return this;
   }
   
   /**
-   * Obtém substitutoTrib
-   * return substitutoTrib
+   * Obtém foneCel
+   * return foneCel
    * @generated
    */
-  public java.lang.String getSubstitutoTrib(){
-    return this.substitutoTrib;
+  public java.lang.String getFoneCel(){
+    return this.foneCel;
   }
   
   /**
-   * Define substitutoTrib
-   * @param substitutoTrib substitutoTrib
+   * Define foneCel
+   * @param foneCel foneCel
    * @generated
    */
-  public Pessoa setSubstitutoTrib(java.lang.String substitutoTrib){
-    this.substitutoTrib = substitutoTrib;
+  public Pessoa setFoneCel(java.lang.String foneCel){
+    this.foneCel = foneCel;
     return this;
   }
   
   /**
-   * Obtém status
-   * return status
+   * Obtém nomePai
+   * return nomePai
    * @generated
    */
-  public java.lang.String getStatus(){
-    return this.status;
+  public java.lang.String getNomePai(){
+    return this.nomePai;
   }
   
   /**
-   * Define status
-   * @param status status
+   * Define nomePai
+   * @param nomePai nomePai
    * @generated
    */
-  public Pessoa setStatus(java.lang.String status){
-    this.status = status;
+  public Pessoa setNomePai(java.lang.String nomePai){
+    this.nomePai = nomePai;
     return this;
   }
   
   /**
-   * Obtém internoExterno
-   * return internoExterno
+   * Obtém nomeMae
+   * return nomeMae
    * @generated
    */
-  public java.lang.String getInternoExterno(){
-    return this.internoExterno;
+  public java.lang.String getNomeMae(){
+    return this.nomeMae;
   }
   
   /**
-   * Define internoExterno
-   * @param internoExterno internoExterno
+   * Define nomeMae
+   * @param nomeMae nomeMae
    * @generated
    */
-  public Pessoa setInternoExterno(java.lang.String internoExterno){
-    this.internoExterno = internoExterno;
+  public Pessoa setNomeMae(java.lang.String nomeMae){
+    this.nomeMae = nomeMae;
     return this;
   }
   
   /**
-   * Obtém natureza
-   * return natureza
+   * Obtém estadoCivil
+   * return estadoCivil
    * @generated
    */
-  public java.lang.String getNatureza(){
-    return this.natureza;
+  public java.lang.String getEstadoCivil(){
+    return this.estadoCivil;
   }
   
   /**
-   * Define natureza
-   * @param natureza natureza
+   * Define estadoCivil
+   * @param estadoCivil estadoCivil
    * @generated
    */
-  public Pessoa setNatureza(java.lang.String natureza){
-    this.natureza = natureza;
+  public Pessoa setEstadoCivil(java.lang.String estadoCivil){
+    this.estadoCivil = estadoCivil;
     return this;
   }
   
   /**
-   * Obtém tipoCliente
-   * return tipoCliente
+   * Obtém nomeConjuge
+   * return nomeConjuge
    * @generated
    */
-  public java.lang.String getTipoCliente(){
-    return this.tipoCliente;
+  public java.lang.String getNomeConjuge(){
+    return this.nomeConjuge;
   }
   
   /**
-   * Define tipoCliente
-   * @param tipoCliente tipoCliente
+   * Define nomeConjuge
+   * @param nomeConjuge nomeConjuge
    * @generated
    */
-  public Pessoa setTipoCliente(java.lang.String tipoCliente){
-    this.tipoCliente = tipoCliente;
+  public Pessoa setNomeConjuge(java.lang.String nomeConjuge){
+    this.nomeConjuge = nomeConjuge;
+    return this;
+  }
+  
+  /**
+   * Obtém tipoPessoa
+   * return tipoPessoa
+   * @generated
+   */
+  public java.lang.String getTipoPessoa(){
+    return this.tipoPessoa;
+  }
+  
+  /**
+   * Define tipoPessoa
+   * @param tipoPessoa tipoPessoa
+   * @generated
+   */
+  public Pessoa setTipoPessoa(java.lang.String tipoPessoa){
+    this.tipoPessoa = tipoPessoa;
     return this;
   }
   
@@ -509,44 +515,6 @@ public class Pessoa implements Serializable {
   }
   
   /**
-   * Obtém inscrEstadual
-   * return inscrEstadual
-   * @generated
-   */
-  public java.lang.String getInscrEstadual(){
-    return this.inscrEstadual;
-  }
-  
-  /**
-   * Define inscrEstadual
-   * @param inscrEstadual inscrEstadual
-   * @generated
-   */
-  public Pessoa setInscrEstadual(java.lang.String inscrEstadual){
-    this.inscrEstadual = inscrEstadual;
-    return this;
-  }
-  
-  /**
-   * Obtém inscrMunicial
-   * return inscrMunicial
-   * @generated
-   */
-  public java.lang.String getInscrMunicial(){
-    return this.inscrMunicial;
-  }
-  
-  /**
-   * Define inscrMunicial
-   * @param inscrMunicial inscrMunicial
-   * @generated
-   */
-  public Pessoa setInscrMunicial(java.lang.String inscrMunicial){
-    this.inscrMunicial = inscrMunicial;
-    return this;
-  }
-  
-  /**
    * Obtém cnpj
    * return cnpj
    * @generated
@@ -562,25 +530,6 @@ public class Pessoa implements Serializable {
    */
   public Pessoa setCnpj(java.lang.String cnpj){
     this.cnpj = cnpj;
-    return this;
-  }
-  
-  /**
-   * Obtém dtAlteracao
-   * return dtAlteracao
-   * @generated
-   */
-  public java.lang.String getDtAlteracao(){
-    return this.dtAlteracao;
-  }
-  
-  /**
-   * Define dtAlteracao
-   * @param dtAlteracao dtAlteracao
-   * @generated
-   */
-  public Pessoa setDtAlteracao(java.lang.String dtAlteracao){
-    this.dtAlteracao = dtAlteracao;
     return this;
   }
   
@@ -642,21 +591,21 @@ public class Pessoa implements Serializable {
   }
   
   /**
-   * Obtém tipo
-   * return tipo
+   * Obtém emailPes
+   * return emailPes
    * @generated
    */
-  public java.lang.String getTipo(){
-    return this.tipo;
+  public java.lang.String getEmailPes(){
+    return this.emailPes;
   }
   
   /**
-   * Define tipo
-   * @param tipo tipo
+   * Define emailPes
+   * @param emailPes emailPes
    * @generated
    */
-  public Pessoa setTipo(java.lang.String tipo){
-    this.tipo = tipo;
+  public Pessoa setEmailPes(java.lang.String emailPes){
+    this.emailPes = emailPes;
     return this;
   }
   
@@ -668,7 +617,7 @@ public class Pessoa implements Serializable {
     if (this == obj) return true;
     if (obj == null || getClass() != obj.getClass()) return false;
     Pessoa object = (Pessoa)obj;
-    if (id != null ? !id.equals(object.id) : object.id != null) return false;
+    if (chaveCliente != null ? !chaveCliente.equals(object.chaveCliente) : object.chaveCliente != null) return false;
     return true;
   }
   
@@ -678,7 +627,7 @@ public class Pessoa implements Serializable {
   @Override
   public int hashCode() {
     int result = 1;
-    result = 31 * result + ((id == null) ? 0 : id.hashCode());
+    result = 31 * result + ((chaveCliente == null) ? 0 : chaveCliente.hashCode());
     return result;
   }
   

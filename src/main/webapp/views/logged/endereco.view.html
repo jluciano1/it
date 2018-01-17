@@ -95,7 +95,7 @@
                 </td>
                 <td class="">
                     <div class="">
-                            {{rowData.pessoa.nome}}
+                            {{rowData.pessoa.nomeCliente}}
                     </div>
                 </td>
                 <td class="">
@@ -241,7 +241,7 @@
                          <!-- end if !model.hasCronappFramework() -->
                     </div>
                 </div>
-                    <datasource name="Pessoa" entity="api/rest/itv/Pessoa" keys="id" class="" dependent-by="{{Endereco}}"></datasource>
+                    <datasource name="Pessoa" entity="api/rest/itv/Pessoa" keys="chaveCliente" class="" dependent-by="{{Endereco}}"></datasource>
 
                 <div data-component="crn-combobox-dynamic" id="crn-combobox-dynamic-pessoa" class="">
                     <div class="form-group">
@@ -249,11 +249,11 @@
 
                                 <ui-select ng-model="Endereco.active.pessoa" crn-datasource="Pessoa" class="crn-select" id="combobox-dynamic-pessoa"  theme="bootstrap">
                                     <ui-select-match class="" placeholder="Select...">
-                                        {{$select.selected.nome}}
+                                        {{$select.selected.nomeCliente}}
                                     </ui-select-match>
                                     <ui-select-choices  repeat="rowData in datasource.data | filter : $select.search" class="" refresh="" refresh-deplay="">
                                         <div class="" data-container="true">
-                                            {{rowData.nome}}
+                                            {{rowData.nomeCliente}}
                                         </div>
                                     </ui-select-choices>
                                 </ui-select>
