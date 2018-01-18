@@ -3,12 +3,6 @@
 <!-- div row para pesquisa -->
 <!--<div class="row">-->
 
-<div ng-hide="Pessoa.inserting || Pessoa.editing" class="">
-    <div class="form-group">
-        <label for="textinput-filter" class="">{{"template.crud.search" | translate}}</label>
-        <input type="text" ng-model="query" class="form-control" value="%" placeholder="{{'template.crud.search' | translate}}">
-    </div>
-</div>
 
 <div data-component="crn-button" id="crn-button-564202" class="">
     <button class="btn btn-primary" type="submit" onclick="" data-component="crn-button" ng-click="Pessoa.startInserting()" ng-hide="Pessoa.inserting || Pessoa.editing"><i class="fa fa-user"></i> <span class="">{{"template.crud.new" | translate}}</span></button>
@@ -16,7 +10,7 @@
 <!-- fim div row para pesquisa -->
 <!--</div>-->
 
-<datasource filter="{{query == '' || query == null ? '' : ('/listByNome/' + query)}}" name="Pessoa" entity="api/rest/itv/Pessoa" keys="id" rows-per-page="100" delete-message="Deseja remover?" class=""></datasource>
+<datasource filter="" name="Pessoa" entity="api/rest/itv/Pessoa" keys="id" rows-per-page="100" delete-message="Deseja remover?" class=""></datasource>
 <div class="component-holder" data-component="crn-grid" id="crn-grid-Pessoa">
     <div crn-datasource="Pessoa" class="" ng-hide="Pessoa.editing || Pessoa.inserting">
         <table class="table  table-bordered table-hover table-striped">
@@ -45,9 +39,6 @@
                 </th>
                 <th class="">
                     <div class="">Parcelas Aberto</div>
-                </th>
-                <th class="">
-                    <div class="">Cliente Ven</div>
                 </th>
                 <th class="">
                     <div class="">Fone Res</div>
@@ -89,7 +80,10 @@
                     <div class="">Dado Pessoal Facebook</div>
                 </th>
                 <th class="">
-                    <div class="">Email Pes</div>
+                    <div class="">Email</div>
+                </th>
+                <th class="">
+                    <div class="">Email Dois</div>
                 </th>
                 <th class="">
                     <div class="">{{"template.crud.actions" | translate}}</div>
@@ -136,11 +130,6 @@
                 <td class="">
                     <div class="">
                                 {{rowData.parcelasAberto  }}
-                    </div>
-                </td>
-                <td class="">
-                    <div class="">
-                                {{rowData.clienteVen  }}
                     </div>
                 </td>
                 <td class="">
@@ -210,7 +199,12 @@
                 </td>
                 <td class="">
                     <div class="">
-                                {{rowData.emailPes  }}
+                                {{rowData.email  }}
+                    </div>
+                </td>
+                <td class="">
+                    <div class="">
+                                {{rowData.emailDois  }}
                     </div>
                 </td>
                 <td class="">
@@ -346,15 +340,6 @@
                         <label for="textinput-parcelasAberto" class="">Parcelas Aberto</label>
 
                                 <input type="number"  ng-model="Pessoa.active.parcelasAberto" class="form-control" id="textinput-parcelasAberto" placeholder="Parcelas Aberto" >
-                         <!-- end if !model.hasCronappFramework() -->
-                    </div>
-                </div>
-
-                <div data-component="crn-textinput" id="crn-textinput-clienteVen" class="">
-                    <div class="form-group">
-                        <label for="textinput-clienteVen" class="">Cliente Ven</label>
-
-                                <input type="number"  ng-model="Pessoa.active.clienteVen" class="form-control" id="textinput-clienteVen" placeholder="Cliente Ven" >
                          <!-- end if !model.hasCronappFramework() -->
                     </div>
                 </div>
@@ -566,16 +551,31 @@
                     </div>
                 </div>
 
-                <div data-component="crn-textinput" id="crn-textinput-emailPes" class="">
+                <div data-component="crn-textinput" id="crn-textinput-email" class="">
                     <div class="form-group">
-                        <label for="textinput-emailPes" class="">Email Pes</label>
+                        <label for="textinput-email" class="">Email</label>
 
                                 <input
                                             type="text"
-                                            ng-model="Pessoa.active.emailPes"
+                                            ng-model="Pessoa.active.email"
                                             class="form-control"
-                                            id="textinput-emailPes"
-                                            placeholder="Email Pes"
+                                            id="textinput-email"
+                                            placeholder="Email"
+                                            >
+                         <!-- end if !model.hasCronappFramework() -->
+                    </div>
+                </div>
+
+                <div data-component="crn-textinput" id="crn-textinput-emailDois" class="">
+                    <div class="form-group">
+                        <label for="textinput-emailDois" class="">Email Dois</label>
+
+                                <input
+                                            type="text"
+                                            ng-model="Pessoa.active.emailDois"
+                                            class="form-control"
+                                            id="textinput-emailDois"
+                                            placeholder="Email Dois"
                                             >
                          <!-- end if !model.hasCronappFramework() -->
                     </div>

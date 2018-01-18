@@ -74,12 +74,6 @@ public class Pessoa implements Serializable {
   /**
   * @generated
   */
-  @Column(name = "clienteVen", nullable = true, unique = false, insertable=true, updatable=true)
-  private int clienteVen;
-  
-  /**
-  * @generated
-  */
   @Column(name = "foneRes", nullable = true, unique = false, insertable=true, updatable=true)
   private java.lang.String foneRes;
   
@@ -161,14 +155,20 @@ public class Pessoa implements Serializable {
   /**
   * @generated
   */
-  @Column(name = "emailPes", nullable = true, unique = false, insertable=true, updatable=true)
-  private java.lang.String emailPes;
+  @Column(name = "email", nullable = true, unique = false, insertable=true, updatable=true)
+  private java.lang.String email;
   
   /**
   * @generated
   */
   @Column(name = "chaveCliente", nullable = true, unique = false, insertable=true, updatable=true)
   private java.lang.String chaveCliente;
+  
+  /**
+  * @generated
+  */
+  @Column(name = "emailDois", nullable = true, unique = false, insertable=true, updatable=true)
+  private java.lang.String emailDois;
   
   /**
    * Construtor
@@ -327,25 +327,6 @@ public class Pessoa implements Serializable {
    */
   public Pessoa setParcelasAberto(int parcelasAberto){
     this.parcelasAberto = parcelasAberto;
-    return this;
-  }
-  
-  /**
-   * Obtém clienteVen
-   * return clienteVen
-   * @generated
-   */
-  public int getClienteVen(){
-    return this.clienteVen;
-  }
-  
-  /**
-   * Define clienteVen
-   * @param clienteVen clienteVen
-   * @generated
-   */
-  public Pessoa setClienteVen(int clienteVen){
-    this.clienteVen = clienteVen;
     return this;
   }
   
@@ -597,21 +578,21 @@ public class Pessoa implements Serializable {
   }
   
   /**
-   * Obtém emailPes
-   * return emailPes
+   * Obtém email
+   * return email
    * @generated
    */
-  public java.lang.String getEmailPes(){
-    return this.emailPes;
+  public java.lang.String getEmail(){
+    return this.email;
   }
   
   /**
-   * Define emailPes
-   * @param emailPes emailPes
+   * Define email
+   * @param email email
    * @generated
    */
-  public Pessoa setEmailPes(java.lang.String emailPes){
-    this.emailPes = emailPes;
+  public Pessoa setEmail(java.lang.String email){
+    this.email = email;
     return this;
   }
   
@@ -631,6 +612,25 @@ public class Pessoa implements Serializable {
    */
   public Pessoa setChaveCliente(java.lang.String chaveCliente){
     this.chaveCliente = chaveCliente;
+    return this;
+  }
+  
+  /**
+   * Obtém emailDois
+   * return emailDois
+   * @generated
+   */
+  public java.lang.String getEmailDois(){
+    return this.emailDois;
+  }
+  
+  /**
+   * Define emailDois
+   * @param emailDois emailDois
+   * @generated
+   */
+  public Pessoa setEmailDois(java.lang.String emailDois){
+    this.emailDois = emailDois;
     return this;
   }
   
